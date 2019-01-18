@@ -3,6 +3,7 @@ import styled from 'styled-components';
 
 import Tabs from './Tabs';
 import Cards from './Cards';
+import Carousel from '/Users/Don/Git/Sprint-Challenge-Lambda-Times-React/lambdatimes/src/components/Carousel/Carousel.js';
 
 // Importing our tab and card data. No need to change anything here.
 import { tabData, cardData } from '../../data';
@@ -58,6 +59,7 @@ export default class Content extends Component {
         <Tabs tabs={this.state.tabs}
         selectedTab={this.state.selected}
         selectTabHandler={this.changeSelected} />
+        <Carousel />
         <Cards
         cards={this.filterCards()} />
       </ContentContainerStyles>

@@ -5,23 +5,29 @@ export default class Carousel extends Component {
   constructor(props){
     super(props);
     this.state = {
+      images: []
 
     }
   }
   componentDidMount(){
+    this.setState({
+      images: carouselData
+    })
 
   }
 
-  leftClick = () => {
+  leftClick = (e) => {
+    // on click, image--
 
   }
 
   rightClick = () => {
+    // on click, image ++
 
   }
 
   selectedImage = () => {
-    return <img src={} style={{display: 'block'}} />
+    return <img src={this.state.images} style={{display: 'block'}} alt="Mountains and Such" />
   }
   
   render(){

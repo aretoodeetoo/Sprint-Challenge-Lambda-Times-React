@@ -25,22 +25,19 @@ const CardAuthor = styled.div`
   flex-direction: row;
   margin-top: 15px;
 `
-
 const CardImageContainer = styled.div`
-padding-right: 10px;
-border-right: 1px solid lightgrey;
-height: 40px;
+  padding-right: 10px;
+  border-right: 1px solid lightgrey;
+  height: 40px;
 `
-
 const CardImage = styled.img`
-width: 40px;
+  width: 40px;
 `
-
 const AuthorSpan = styled.span`
-padding-left: 10px;
-font-size: 12px;
-letter-spacing: 1px;
-font-weight: bold;
+  padding-left: 10px;
+  font-size: 12px;
+  letter-spacing: 1px;
+  font-weight: bold;
 `
 
 const Card = props => {
