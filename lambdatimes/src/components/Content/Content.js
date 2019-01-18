@@ -30,15 +30,13 @@ export default class Content extends Component {
   };
 
   filterCards = e => {
-    // e.preventDefault();
-    // //eslint-disable-next-line
-    // let newArray = []
-    // let newCardsArray = this.state.cards.map(card => {
-    //   if (card.tab === this.state.selected){
-    //     newCardsArray.push(card);
-    //   }
-    // })
-    return this.state.cards;
+    console.log('Cards are filtering?');
+   if (this.state.selected === 'all'){
+     return this.state.cards;
+   } else {
+     return this.state.cards.filter(card => card.tab === this.state.selected)
+   }
+
   };
 
   render() {
