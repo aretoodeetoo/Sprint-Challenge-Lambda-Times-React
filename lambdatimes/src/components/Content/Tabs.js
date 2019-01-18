@@ -1,5 +1,6 @@
 import React from 'react';
 import Tab from './Tab';
+
 const Tabs = props => {
   return (
     <div className="tabs">
@@ -7,10 +8,9 @@ const Tabs = props => {
         <span className="title">TRENDING TOPICS:</span>
         {props.tabs.map(tab => 
           <Tab 
-          key={tab}
           tab={tab}
           selectedTab={props.selectedTab}
-          selectTabHandler={props.changeSelected}
+          changeSelected={props.changeSelected}
           />
           )}
       </div>
