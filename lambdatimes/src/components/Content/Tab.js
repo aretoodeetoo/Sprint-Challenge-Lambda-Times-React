@@ -41,20 +41,20 @@ const TabDiv = styled.div`
   color: #fff;
   background-color: #fff;
 
-  ${props => props.tab === props.selectedTab && css `
-  background-color: #fff;
-  color: #333;
-  border: 2px solid #333;
-`}
+  background-color: ${props => (props.selectedTab === props.tab ? '#fff' : '#333')}
+  color: ${props => (props.selectedTab === props.tab ? '#333' : '#fff')}
+  border: ${props => (props.selectedTab === props.tab ? '2px solid #333' : null)}
 
   &:hover{
     text-decoration: underline;
   }
 `
+// ${props => props.tab === props.selectedTab && css `
+// background-color: #fff;
+// color: #333;
+// border: 2px solid #333;
+// `}
 
-  // background-color: ${props => props.selectedTab === props.tab ? '#fff' : '#333'}
-  // color: ${props => props.selectedTab === props.tab ? '#333' : '#fff'}
-  // border: ${props => props.selectedTab === props.tab ? '2px solid #333' : null}
 
 
 const Tab = props => {
@@ -63,6 +63,8 @@ const Tab = props => {
       if it is not it should just be 'tab'*/
   return (
     <TabDiv
+    selectedTab={props.selectedTab}
+    tab={props.tab}
       onClick={() => {
         props.changeSelected(props.tab);
         /* Replace this dummy click handler function with your selectTabHandler function from props 

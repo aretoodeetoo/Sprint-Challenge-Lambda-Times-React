@@ -5,13 +5,18 @@ export default class Carousel extends Component {
   constructor(props){
     super(props);
     this.state = {
-      images: []
+      images: [],
+      image: []
 
     }
   }
+
   componentDidMount(){
     this.setState({
-      images: carouselData
+      images: carouselData,
+      image: this.state.images.map(image => {
+        return image;
+      })
     })
 
   }
@@ -27,7 +32,7 @@ export default class Carousel extends Component {
   }
 
   selectedImage = () => {
-    return <img src={this.state.images} style={{display: 'block'}} alt="Mountains and Such" />
+    return <img src={this.state.image} style={{display: 'block'}} alt="Mountains and Such" />
   }
   
   render(){
